@@ -32,23 +32,31 @@ The following files are available for the train and test data. Their description
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
 Subject Labels:
+
 1 - Subject 1
-.
-..
+
 ...
+
 30 - Subject 30
 
 
 Activity Labels (Index & Activity):
+
 1 WALKING
+
 2 WALKING_UPSTAIRS
+
 3 WALKING_DOWNSTAIRS
+
 4 SITTING
+
 5 STANDING
+
 6 LAYING
 
 
 Measurement Labels (All contain 'Mean' & 'Std' in their label to signify Mean & Standard Deviation for Measurements per Assignment):
+
 tBodyAccMeanX                     
 tBodyAccMeanY                    
 tBodyAccMeanZ                     
