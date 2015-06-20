@@ -37,9 +37,13 @@ run_analysis.R:
 This R script does the following. 
 
 Assumptions:
+
 *The script assumes that the files from the UCI HAR Dataset have been downloaded and unzipped into the current working directory
+
 *All of the folders and files have the same name and hierarchy as in the .zip file
+
 *Working internet connection to download 'dplyr' and 'reshape2' R packages if they are not already downloaded
+
 *The measurement columns in the ultimate dataset selected are those which contain "Mean", "mean", "Std", or "std" in any part of their name
 
 Script Steps:
