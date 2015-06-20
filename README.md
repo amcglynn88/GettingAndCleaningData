@@ -39,42 +39,45 @@ Assumptions:
 *The measurement columns in the ultimate dataset selected are those which contain "Mean", "mean", "Std", or "std" in any part of their name
 
 Script Steps:
-1. Merges the 'training' and the 'test' data to create one data set.
-2. 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-3. Uses descriptive activity names to name the activities in the data set
-4. Appropriately labels the data set with descriptive measurement variable names. 
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each measurement variable for each activity and each subject.
+1) Merges the 'training' and the 'test' data to create one data set.
+2) Extracts only the measurements on the mean and standard deviation for each measurement. 
+3) Uses descriptive activity names to name the activities in the data set
+4) Appropriately labels the data set with descriptive measurement variable names. 
+5) From the data set in step 4, creates a second, independent tidy data set with the average of each measurement variable for each activity and each subject.
 
 Script Steps Notes:
-1. Merges the training and the test sets to create one data set.
-*Install the 'dplyr' & 'reshape2' if they are not currently installed
-*Load these packages within R for later on in the code
 
-*Read in the test data files from the working directory and respective folder ('subject_test','X_test','y_test')
-*Combine the test data by column (cbind) such that each row represents a subject, an activity, & its measurements
-*Label these columns for later parts of the code by Subject # & Activity #
+1) Merges the training and the test sets to create one data set.
 
-*Read in the train data files from the working directory and respective folder ('subject_train','X_train','y_train')
-*Combine the train data by column (cbind) such that each row represents a subject, an activity, & its measurements
-*Label these columns for later parts of the code by Subject # & Activity #
+Install the 'dplyr' & 'reshape2' if they are not currently installed
+Load these packages within R for later on in the code
+Read in the test data files from the working directory and respective folder ('subject_test','X_test','y_test')
+Combine the test data by column (cbind) such that each row represents a subject, an activity, & its measurements
+Label these columns for later parts of the code by Subject # & Activity #
+Read in the train data files from the working directory and respective folder ('subject_train','X_train','y_train')
+Combine the train data by column (cbind) such that each row represents a subject, an activity, & its measurements
+Label these columns for later parts of the code by Subject # & Activity #
+Combine the 'test' and 'train' datasets, rbind them together as their dimensions match in this respect to get an aggregate dataset
 
-*Combine the 'test' and 'train' datasets, rbind them together as their dimensions match in this respect to get an aggregate dataset
+2) Extracts only the measurements on the mean and standard deviation for each measurement variable. 
 
-2. Extracts only the measurements on the mean and standard deviation for each measurement variable. 
-*Read in the features that correspond to the different measurement variables in the X_train & X_test datasets
-*Select only the columns pertaining to activity, subject, and those which represent a mean or standard deviation as a new dataset
+Read in the features that correspond to the different measurement variables in the X_train & X_test datasets
+Select only the columns pertaining to activity, subject, and those which represent a mean or standard deviation as a new dataset
 
-3. Uses descriptive activity names to name the activities in the data set
-*Read in the "Activity" labels dataset that correspond to the different activities & # on which measurements are recorded by subject
-*Join the two datasets along the common “ActIndex” # column
-*Label the values of the combined tables with the activity
+3) Uses descriptive activity names to name the activities in the data set
 
-4. Appropriately labels the data set with descriptive variable names
-*Remove all the extraneous characters and typographical errors in the measurement variable names
-*Make the "Subject" column a factor variable to be able to summarize information later
-*Sort all of the data in alphabetical order by "Subject" & "Activity" columns
+Read in the "Activity" labels dataset that correspond to the different activities & # on which measurements are recorded by subject
+Join the two datasets along the common “ActIndex” # column
+Label the values of the combined tables with the activity
 
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-*Create a narrow form of the data by subject & each activity, along with their measurements by rows
-*Summarize the new narrow form of the data by the mean for each measurement, going by "Subject" & "Activity" in wide format
-*Write the newly created 'tidy data' table as a text file (.txt) to the working directory
+4) Appropriately labels the data set with descriptive variable names
+
+Remove all the extraneous characters and typographical errors in the measurement variable names
+Make the "Subject" column a factor variable to be able to summarize information later
+Sort all of the data in alphabetical order by "Subject" & "Activity" columns
+
+5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+Create a narrow form of the data by subject & each activity, along with their measurements by rows
+Summarize the new narrow form of the data by the mean for each measurement, going by "Subject" & "Activity" in wide format
+Write the newly created 'tidy data' table as a text file (.txt) to the working directory
