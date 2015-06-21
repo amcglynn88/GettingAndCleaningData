@@ -1,5 +1,5 @@
 if(!require("dplyr")){ install.packages("dplyr")}
-if(!require("reshape2")){install.packages("reshape2")
+if(!require("reshape2")){install.packages("reshape2")}
                          
                          #Load the dplyr & reshape2 packages within R
                          library(dplyr)
