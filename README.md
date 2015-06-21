@@ -58,7 +58,7 @@ Script Steps:
 
 5) From the data set in step 4, creates a second, independent tidy data set with the average of each measurement variable for each activity and each subject.
 
-Script Steps Notes:
+Script Steps Notes (Not Necessarily in Above Order):
 
 1) Merges the training and the test sets to create one data set.
 
